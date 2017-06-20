@@ -433,6 +433,10 @@ class Legs
     else
     {
         this->previousMilli = this->currentMilli;
+        //stop
+        analogWrite(d1Pwm,0);
+        analogWrite(d2Pwm,0);
+        
         Serial.println("reset");
         done=true;
     }
@@ -481,6 +485,10 @@ class Legs
       else
       {
          this->previousMilli = this->currentMilli;
+        //stop
+        analogWrite(d1Pwm,0);
+        analogWrite(d2Pwm,0);
+                 
          done = true;
       }
 
@@ -525,6 +533,10 @@ class Legs
       else
       {
          this->previousMilli = this->currentMilli;
+         //stop
+         analogWrite(d1Pwm,0);
+         analogWrite(d2Pwm,0);
+                 
          done = true;
       }   
 
@@ -568,6 +580,10 @@ class Legs
      else
      {
          this->previousMilli = this->currentMilli;
+         //stop
+         analogWrite(d1Pwm,0);
+         analogWrite(d2Pwm,0);
+                 
          done=true;
      }
 
@@ -1372,9 +1388,10 @@ void setup()
   //msequence->package4("forward",60,"stopMove",1000000,"backward",20000,"stopMove",100);
   //walk in a square clockwise
   //msequence->package18("forward",80,"stopMove",1000,"left",90,"forward",230,"stopMove",1000,"left",90,"stopMove",1000,"drop",0,"forward",35.5,"stopMove",1000,"pickUp",0,"backward",35.5,"stopMove",1000,"left",90,"forward",280,"stopMove",10000,"drop",0,"pickUp",0);
-  msequence->package3("stopMove",2000,"drop",0,"pickUp",0);
   
   //msequence->package8("forward",10000,"left",90,"forward",10000,"left",90,"forward",10000,"left",90,"forward",10000,"left",90);
+
+  msequence->package17("forward",80,"left",90,"forward",230,"left",90,"drop",0,"forward",50,"pickUp",0,"backward",40,"left",90,"forward",230,"right",90,"forward",80,"left",90,"stopMove",10000,"drop",0,"pickUp",0,"left",90);
   
   //pidController
   LSetpoint = 0;
