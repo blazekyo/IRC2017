@@ -14,3 +14,15 @@ IMPORTANT NOTES!!!
 -Create own repository to edit/change/save the code.
 -Don't pull the code and merge with the one in the Master Repository UNLESS it is tested with NO BUGS(currently), and it's TESTED on the real bot and it WORKS. 
 -Have fun playing with the code.
+
+## Version V1.1
+
+#### Feature:
+1.	Make the code into different modules.
+
+#### Notes:
+1.	There will be three new files needed for the 
+	IRC_AutobotV1.1.ino to work correctly which are:
+	(A).	Autobot_arm.h
+	(B).	Autobot_settings.h
+	(C).	Autobot_wheel.h
